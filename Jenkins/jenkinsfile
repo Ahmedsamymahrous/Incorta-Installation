@@ -9,7 +9,7 @@ pipeline {
     stages {
         stage('Configure by Ansible') {
             steps {
-                sh 'sudo ansible-playbook -i hosts incorta.yml --private-key /home/incorta/incorta_key'
+                sh 'ansible-playbook -i hosts incorta.yml --private-key /home/incorta/incorta_key'
             }
         }
     }
