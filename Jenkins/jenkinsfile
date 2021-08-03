@@ -1,0 +1,16 @@
+pipeline {
+    agent any
+
+    stage('Provision by Terraform') {
+        steps {
+            sh 'terraform apply --auto-approve -var vm_name="incorta-samy" -var vm_type="n2-standard-4" -var vm_size=100'
+        }
+    }
+    stages {
+        stage('Configure by Ansible') {
+            steps {
+                sh 'sudo ansible-playbook -i hosts incorta.yml --private-key /home/incorta/incorta_key'
+            }
+        }
+    }
+}
