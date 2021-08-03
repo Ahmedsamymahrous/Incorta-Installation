@@ -6,14 +6,7 @@
   - name: Update yum
     yum:
       update_cache: yes
-
-
-  # - name: Create "incorta" user 
-  #   user:
-  #     name: incorta
-  #     groups: wheel
-  #     append: yes
-  #     password: "{{ 'incorta2013' | password_hash('sha512','A512') }}"
+      
 
   - name: Append the public key to authorized_keys
     lineinfile:
