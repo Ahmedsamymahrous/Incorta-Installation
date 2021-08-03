@@ -21,11 +21,5 @@ resource "google_compute_instance" "incorta" {
 }
 
 
-# resource "local_file" "ip" {
-  # content  = google_compute_instance.incorta.network_interface[0].network_ip  #private ip
-#   content  = google_compute_instance.incorta.network_interface[0].access_config[0].nat_ip   #public ip
-
-#   filename = "vm_ip.txt"
-# }
 
 
