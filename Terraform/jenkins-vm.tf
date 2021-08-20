@@ -21,15 +21,3 @@ resource "google_compute_instance" "jenkins" {
   }
 }
 
-######
-# incorta user
-# java home
-# 100gb
-
-# pipeline
-#   terraform -> machine name - machine type - disk size 
-#   ansible -> machine ip 
-
-# incorta 
-
-# n1-standard2
